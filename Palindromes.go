@@ -10,7 +10,7 @@ import (
 	"github.com/fatih/color"
 )
 
-var re, _ = regexp.Compile(`\r*\n*\s*[.,*¿?"{}'!¡]*`)
+var re, _ = regexp.Compile(`\W*`)
 
 func main() {
 	var input string
@@ -34,7 +34,6 @@ func main() {
 
 //IsPalindrome check if a string a palindrome
 func IsPalindrome(input string) bool {
-	input = re.ReplaceAllString(input, "")
 	input = strings.ToUpper(input)
 
 	var specialCharacters = map[string]string{
