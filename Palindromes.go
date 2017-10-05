@@ -51,7 +51,7 @@ func IsPalindrome(input string) bool {
 	}
 
 	var j = 0
-	for i := len(input) - 1; i >= 0; i-- {
+	for i := len(input) - 1; i > j; i-- {
 		if input[i] != input[j] {
 			return false
 		}
